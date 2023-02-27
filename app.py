@@ -30,7 +30,8 @@ result = st.slider('Enter the exam result:', 0.0, 100.0, step=0.1)
 result2= st.slider('Enter the exam completion time:', 0.0, 100.0, step=0.1)
 
 # Create a 2D array with the exam result
-data = np.array([[result],[result2]])
+data = np.array([[result, result2]])
+
 
 # Load the KMeans model from the saved .pkl file
 with open('kmeans_model.pkl', 'rb') as f:
